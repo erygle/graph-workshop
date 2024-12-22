@@ -1,4 +1,17 @@
 # graph-workshop
+Dijkstra Algoritması anlatımı sırasında denenebilecek farklı graph teorisi kodları için klasördeki dosyalara göz atabilirsiniz.
+## Yükleme
+Git kullanarak kendi makinanız üzerinde denemek için aşağıdaki komutu kullanarak repoyu klonlayabilirsiniz :
+```bash
+git clone https://github.com/erygle/graph-workshop
+cd graph-workshop
+```
+Klasör içerisindeki herhangi bir dosyayı çalıştırmak için :
+```bash
+gcc dosya_adi.cpp -o output
+./output
+```
+
 ## Kullanılabilir Inputlar
 
 Aşağıdaki input `graph_vector.cpp`, `graph_pair.cpp`, `breadth_first_search.cpp`, `depth_first_search.cpp` kodlarına göre kullanılabilir:
