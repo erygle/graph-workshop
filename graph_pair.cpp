@@ -9,9 +9,9 @@ int32_t main(){
     cin >> size;
     cout << "Kenar adedini girin: ";
     cin >> edges;
-
+    /*her bir vector satırına pair çiftleri koyarak graph oluşturalım*/
     vector<pair<int,int>> graph(size+1);
-
+    /*değerleri birbirine pair çifti olarak bağlamak için ters yazma işlemi uyguluyoruz*/
     for(int i=0 ; i<edges ; i++){
         int x,y;
         cin>>x>>y;

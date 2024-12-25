@@ -2,7 +2,9 @@
 
 using namespace std;
 #define ii pair<int,int>
-
+//seçilen ilk nodeun uzaklığını çok büyük bir değer alıyoruz
+//çünkü en küçük değerleri seçeceğimiz için bu değeri aslında
+//temp bir değer olarak gibi kabul edebiliriz
 const int INF = 1e9;
 
 vector<int> dijkstra(vector<vector<pair<int,int>>>&adj,int nodes,int startingNode);
@@ -35,7 +37,9 @@ return 0;
 }
 
 vector<int> dijkstra(vector<vector<pair<int,int>>>&adj,int nodes,int startingNode){
+    //büyükten küçüğe değerleri tutan bir queue oluşturuyoruz
     priority_queue<ii,vector<ii>,greater<ii>>pq;
+    //başlangıç nodeunu seçiyoruz
     vector<int>from_begin(nodes,INF);
 
     from_begin[startingNode]=0;
@@ -47,7 +51,8 @@ vector<int> dijkstra(vector<vector<pair<int,int>>>&adj,int nodes,int startingNod
         pq.pop();
 
         if(dist > from_begin[curr])continue;
-
+        //bağlantısı olan nodeu ve uzaklığını eski değere ekleyip karşılaştırma işlemini yapıyoruz
+        //küçük olan değer pq'ya aktarılıyor
         for(auto x : adj[curr]){
             if(x.first + from_begin[curr] < from_begin[x.second]){
                 from_begin[x.second] = x.first + from_begin[curr];

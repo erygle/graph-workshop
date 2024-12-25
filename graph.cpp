@@ -1,13 +1,14 @@
-#include <iostream>
-#include <vector>
+#include<bits/stdc++.h>
 
 using namespace std;
 
-int main() {
-    int V = 5;
-    vector<vector<int>> graph(V);
+int32_t main() {
+    int size = 5;
+    vector<vector<int>> graph(size);
 
-    //edges
+    /*her bir vektörü birbirine bağlıyoruz 
+    eğer ki ikinci satırlar olmazsa
+    x y'ye bağlı iken y x' bağlı olmaz*/
     graph[0].push_back(1);
     graph[1].push_back(0);
 
@@ -26,11 +27,11 @@ int main() {
     graph[2].push_back(3);
     graph[3].push_back(2);
 
-    for (int i = 0; i < V; ++i) {
+    /*ilk olarak her bir node'un satırına giriyoruz ve burdaki
+    değerleri yeni bir for döngüsü kullanarak yazdırıyoruz*/
+    for (int i = 0; i < size; ++i) {
         cout << "Node " << i << ": ";
-        
         for (int v : graph[i]) cout << v << " ";
-        
         cout << endl;
     }
 return 0;

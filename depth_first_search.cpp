@@ -31,6 +31,7 @@ return 0;
 void dfs(vector<vector<int>>&graph, int startingNode){
     int size=graph.size();
     vector<bool> visited(size+1, false);
+    //aynı mantıkla bu sefer stack değişkeninde nodelar tutulacak ve en son gelen değer seçilecek
     stack<int> st;
 
     st.push(startingNode);

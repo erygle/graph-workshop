@@ -5,11 +5,14 @@ using namespace std;
 int32_t main(){
     int size,edges;
 
+    /*toplam kullanacağımız node sayısını ve bunların kaç adet bağlantısı olacağını tanımlıyoruz*/
     cout << "Node adedini girin: ";
     cin >> size;
     cout << "Kenar adedini girin: ";
     cin >> edges;
-
+    //index değerlerinin sıfırdan başlaması mantığı olaraktan eğerki
+    //1 den 6 ya kadar node değerlerimiz olacaksa girdiğimiz size adedi + 1
+    //dememiz gerekiyor aksi takdirde 1 den 6 ya değil 0 dan 5 e giriş olmalı
     vector<vector<int>> graph(size+1);
 
     for(int i=0 ; i<edges ; i++){

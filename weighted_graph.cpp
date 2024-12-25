@@ -8,7 +8,7 @@ int32_t main(){
     cin>>nodes;
     cout<<"Kenar adedini girin: ";
     cin>>edges;
-
+    /*bir matris oluşturuyoruz gibi ancak her bir değer için iki değer atadığımızı düşünebilirsiniz*/
     vector<vector<pair<int,int>>> graph(nodes+1);
 
     //x ve y node, w aralarındaki uzaklık

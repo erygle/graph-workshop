@@ -30,7 +30,9 @@ return 0;
 
 void bfs(vector<vector<int>>&graph, int startingNode){
     int size=graph.size();
+    //eğerki node'u önceden ziyret ettiysek visited true olacak
     vector<bool> visited(size+1, false);
+    //sıradaki nodelar queueya aktarılacak ve en öndeki node seçilecek
     queue<int> q;
 
     q.push(startingNode);
